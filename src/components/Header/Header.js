@@ -285,8 +285,6 @@ const Header = (props) => {
               horizontal: 'center',
             }}
           >
-            <MenuItem onClick={handleCloseAvatarMenu}>Profile</MenuItem>
-            <MenuItem onClick={handleCloseAvatarMenu}>My account</MenuItem>
             <MenuItem
               onClick={() => {
                 handleCloseAvatarMenu();

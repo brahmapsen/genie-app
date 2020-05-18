@@ -22,6 +22,12 @@ const prod = {
   wallets: {
     portisId: 'ae18109e-f2e1-4ee7-ace7-f7f14cb58bce',
   },
+  googleAnalytics: {
+    trackingId: 'UA-166965068-1',
+    options: {
+      testMode: false,
+    },
+  },
 };
 
 const dev = {
@@ -47,6 +53,12 @@ const dev = {
   },
   wallets: {
     portisId: 'ae18109e-f2e1-4ee7-ace7-f7f14cb58bce',
+  },
+  googleAnalytics: {
+    trackingId: 'UA-166965068-1',
+    options: {
+      testMode: false,
+    },
   },
 };
 

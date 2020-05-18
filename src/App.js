@@ -11,6 +11,12 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import { client } from './services/graphql';
+import withTracker from './components/withTracker';
+
+const PoolCreatorWithTracker = withTracker(PoolCreator);
+const PoolDashboardWithTracker = withTracker(PoolDashboard);
+const PoolExplorerWithTracker = withTracker(PoolExplorer);
+const HomeWithTracker = withTracker(Home);
 
 const useStyles = makeStyles((theme) => ({
   app: {
@@ -31,13 +37,21 @@ const App = (props) => {
           <div className={classes.content}>
             <Header />
             <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/create-pool" exact component={PoolCreator} />
-              <Route path="/explore" exact component={PoolExplorer} />
+              <Route path="/" exact component={HomeWithTracker} />
+              <Route
+                path="/create-pool"
+                exact
+                component={PoolCreatorWithTracker}
+              />
+              <Route
+                path="/explore"
+                exact
+                component={PoolExplorerWithTracker}
+              />
               <Route
                 path="/dashboard/:poolAddress"
                 exact
-                component={PoolDashboard}
+                component={PoolDashboardWithTracker}
               />
             </Switch>
           </div>
